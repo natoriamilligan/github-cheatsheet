@@ -23,3 +23,6 @@
 - `git diff` : shows what changes you have made before you commit
 - `git diff --staged` : shows changes you've staged but haven't commited yet
 - `git restore --staged hello.py` : unstage a file
+
+## Branch Operations
+
