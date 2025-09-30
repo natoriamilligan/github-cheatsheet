@@ -35,3 +35,19 @@
 - `git branch -d other-branch` : delete a branch if the branch has been merged (use -D if you want to delete if it hasnt been merged)
 - `git commit --amend -m "Adding to previous commit and revising message"` : adds the commit to the previous commit and overwrites previous message. (omitting the -m will open the text editor so you can modify the previous message)
 - `git revert HEAD` : reverts previous commit
+- `git cherry-pick second-branch` : merges last commit to branch you are in from another branch
+  ### Rebasing
+    - `git rebase -i HEAD~3` : go back 3 commits
+    - `git commit --amend -m "changed commit` : this is how you change a commit when rebasing outside of the text editor
+ 
+## Stashing
+**Make sure to keep a running tab of your stashes**
+- `git stash' : stash away commits. Only stashes tracked files and stages changes (use -u to include untracked files)
+- `git stash push -u -m "Make commit"` : stashes and adds comments
+- `git stash list` : to see a list of the stashed files
+- `git stash apply` : applys the most recent stash to your directory but keeping the stash in the stash list
+  - `git stash apply stash@{1}` : re applies other stashes
+- `git stash clear` : deletes all stashes
+- `git stash pop` : applies changes from your most recent stash to your working directory and then removes that stash from the list
+- `git stash branch feature-branch` : after stashing, you can use this command to move that stash to another branch. Then the stash is removed from the stashed list
+- `git stash branch feature-branch` : removes a specific stash
