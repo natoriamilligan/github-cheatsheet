@@ -4,7 +4,7 @@
 - After you've created your folder, go into the folder
 - `git init` : initialize your git repository
 - `git log` : shows all the commits you have done
-  - `git log --oneline` : shows one line
+  - `git log --oneline` : shows one line logs
 
 ## Configurations
 - `git-config-lab` folder : folder that holds all your configurations
@@ -51,3 +51,20 @@
 - `git stash pop` : applies changes from your most recent stash to your working directory and then removes that stash from the list
 - `git stash branch feature-branch` : after stashing, you can use this command to move that stash to another branch. Then the stash is removed from the stashed list
 - `git stash branch feature-branch` : removes a specific stash
+
+## Tags
+  - `git show <tag-name>` : shows the tag
+  - `git tag -l "v1.*"` : another way to list tags
+  - `git tag -n` : list tags with their first line of message
+  - `git checkout <tag0name>` : enter your commit and can make changes
+    - if you make changes you can retain them by creating a new branch `git checkout -b branch-name <tag-name>`
+  - `git tag -d <tag-name>` : delete a tag
+  ### Lightweight Tags
+  - `git tag v0.1` : creates a tag names v0.1 pointing to the current commit (HEAD). this is a lightweight tag
+  - `git tag v0.0.1 <commit-hash>` : creates a tag for a past commit ( just go to git log --oneline to get the hash)
+  - `git tag` : shows your list of tags
+  ### Annotated Tags (includes taggers name email date and tagging message)
+  - `git tag -a v1.0 -m "First major release"` : the -a specifies an annoted tag
+    
+
+    
