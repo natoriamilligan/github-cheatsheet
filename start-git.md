@@ -5,7 +5,22 @@
 - `git init` : initialize your git repository
 - `git log` : shows all the commits you have done
   - `git log --oneline` : shows one line logs
-
+  - `git log --stat` : shows insertions and deletions for each commit
+  - `git log -p` : shows more detailed information for each commit
+  - `git log --pretty=format:"%h - %an, %ar : %s"`
+    - `%h` : abbreviated commit hash
+    - `%an` : author name
+    - `%ar` : author date, relative
+    - `%s` : subject (commit message)
+  - `git log --since=1.week` : commit from the last week
+  - `git log --after="2023-06-01" --before="2023-06-30"` : specifc dates ( also can use --until, --before, --after, --since)
+  - `git log --grep="function"` : can use grep to search for specific words in the commit message
+  - `git log -- script.js` : can search using the file name
+  - `git log -S "console.log"` : changes where console.log changes
+  - `git log -p --since=1.week -- script.js` : detailed changs to a file in a specific timeframe
+- `git shortlog -s -n` : see a summary of commits by author
+- `git rev-list --count HEAD` : see total number of commits
+ 
 ## Configurations
 - `git-config-lab` folder : folder that holds all your configurations
 - `git config --list ` : lists all configurations
